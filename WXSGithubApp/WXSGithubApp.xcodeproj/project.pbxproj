@@ -15,6 +15,11 @@
 		928DDE6D1E6704D700F32BDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928DDE6B1E6704D700F32BDB /* LaunchScreen.storyboard */; };
 		928DDE781E6704D800F32BDB /* WXSGithubAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE771E6704D800F32BDB /* WXSGithubAppTests.m */; };
 		928DDE831E6704D800F32BDB /* WXSGithubAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE821E6704D800F32BDB /* WXSGithubAppUITests.m */; };
+		928DDE961E67059500F32BDB /* RepoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE911E67059500F32BDB /* RepoCell.m */; };
+		928DDE971E67059500F32BDB /* RepoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE931E67059500F32BDB /* RepoModel.m */; };
+		928DDE9B1E6705A100F32BDB /* WXSGithubNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE9A1E6705A100F32BDB /* WXSGithubNetWork.m */; };
+		928DDE9E1E67067B00F32BDB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE9D1E67067B00F32BDB /* SearchViewController.m */; };
+		928DDEA41E67094A00F32BDB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDEA31E67094A00F32BDB /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		928DDE7E1E6704D800F32BDB /* WXSGithubAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXSGithubAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		928DDE821E6704D800F32BDB /* WXSGithubAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSGithubAppUITests.m; sourceTree = "<group>"; };
 		928DDE841E6704D800F32BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		928DDE901E67059500F32BDB /* RepoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoCell.h; sourceTree = "<group>"; };
+		928DDE911E67059500F32BDB /* RepoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoCell.m; sourceTree = "<group>"; };
+		928DDE921E67059500F32BDB /* RepoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoModel.h; sourceTree = "<group>"; };
+		928DDE931E67059500F32BDB /* RepoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoModel.m; sourceTree = "<group>"; };
+		928DDE991E6705A100F32BDB /* WXSGithubNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSGithubNetWork.h; sourceTree = "<group>"; };
+		928DDE9A1E6705A100F32BDB /* WXSGithubNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSGithubNetWork.m; sourceTree = "<group>"; };
+		928DDE9C1E67067B00F32BDB /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		928DDE9D1E67067B00F32BDB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		928DDEA21E67094A00F32BDB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		928DDEA31E67094A00F32BDB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +120,16 @@
 				928DDE611E6704D700F32BDB /* AppDelegate.m */,
 				928DDE631E6704D700F32BDB /* ViewController.h */,
 				928DDE641E6704D700F32BDB /* ViewController.m */,
+				928DDE9C1E67067B00F32BDB /* SearchViewController.h */,
+				928DDE9D1E67067B00F32BDB /* SearchViewController.m */,
+				928DDEA21E67094A00F32BDB /* DetailViewController.h */,
+				928DDEA31E67094A00F32BDB /* DetailViewController.m */,
+				928DDE901E67059500F32BDB /* RepoCell.h */,
+				928DDE911E67059500F32BDB /* RepoCell.m */,
+				928DDE921E67059500F32BDB /* RepoModel.h */,
+				928DDE931E67059500F32BDB /* RepoModel.m */,
+				928DDE991E6705A100F32BDB /* WXSGithubNetWork.h */,
+				928DDE9A1E6705A100F32BDB /* WXSGithubNetWork.m */,
 				928DDE661E6704D700F32BDB /* Main.storyboard */,
 				928DDE691E6704D700F32BDB /* Assets.xcassets */,
 				928DDE6B1E6704D700F32BDB /* LaunchScreen.storyboard */,
@@ -207,6 +232,7 @@
 				TargetAttributes = {
 					928DDE591E6704D700F32BDB = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = XL757M85MR;
 						ProvisioningStyle = Automatic;
 					};
 					928DDE721E6704D800F32BDB = {
@@ -275,7 +301,12 @@
 			files = (
 				928DDE651E6704D700F32BDB /* ViewController.m in Sources */,
 				928DDE621E6704D700F32BDB /* AppDelegate.m in Sources */,
+				928DDEA41E67094A00F32BDB /* DetailViewController.m in Sources */,
 				928DDE5F1E6704D700F32BDB /* main.m in Sources */,
+				928DDE961E67059500F32BDB /* RepoCell.m in Sources */,
+				928DDE971E67059500F32BDB /* RepoModel.m in Sources */,
+				928DDE9B1E6705A100F32BDB /* WXSGithubNetWork.m in Sources */,
+				928DDE9E1E67067B00F32BDB /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XL757M85MR;
 				INFOPLIST_FILE = WXSGithubApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -436,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XL757M85MR;
 				INFOPLIST_FILE = WXSGithubApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
