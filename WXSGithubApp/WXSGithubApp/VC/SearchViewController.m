@@ -14,7 +14,7 @@
 
 CGFloat const k_animaton_time = 0.4;
 
-@interface SearchViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating,UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning>
+@interface SearchViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,UISearchResultsUpdating,UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>
 {
     int32_t _page;
     NSIndexPath *_selectIndepath;
@@ -105,15 +105,11 @@ CGFloat const k_animaton_time = 0.4;
     if (indexPath.row < _items.count) {
         RepoModel *model = _items[indexPath.row];
         DetailViewController *vc = [[DetailViewController alloc] initWithRepoModel:model];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-//        nav.transitioningDelegate = self;
-        [self presentViewController:nav animated:YES completion:^{
-            
-        }];
+        vc.navigationController.delegate = self;
+        [self.navigationController pushViewController:vc animated:YES];
         _selectIndepath = indexPath;
     }
-
-
+    
 }
 
 //翻页
@@ -126,9 +122,15 @@ CGFloat const k_animaton_time = 0.4;
 //     }
 }
 
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    return self;
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    if (UINavigationControllerOperationPush) {
+        return self;
+    }else{
+        return nil;
+    }
 }
+
+
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext{
     return k_animaton_time;
     

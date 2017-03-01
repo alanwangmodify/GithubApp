@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		928DDE5F1E6704D700F32BDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE5E1E6704D700F32BDB /* main.m */; };
 		928DDE621E6704D700F32BDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE611E6704D700F32BDB /* AppDelegate.m */; };
-		928DDE651E6704D700F32BDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE641E6704D700F32BDB /* ViewController.m */; };
 		928DDE681E6704D700F32BDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928DDE661E6704D700F32BDB /* Main.storyboard */; };
 		928DDE6A1E6704D700F32BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928DDE691E6704D700F32BDB /* Assets.xcassets */; };
 		928DDE6D1E6704D700F32BDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928DDE6B1E6704D700F32BDB /* LaunchScreen.storyboard */; };
 		928DDE781E6704D800F32BDB /* WXSGithubAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE771E6704D800F32BDB /* WXSGithubAppTests.m */; };
 		928DDE831E6704D800F32BDB /* WXSGithubAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE821E6704D800F32BDB /* WXSGithubAppUITests.m */; };
-		928DDE961E67059500F32BDB /* RepoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE911E67059500F32BDB /* RepoCell.m */; };
-		928DDE971E67059500F32BDB /* RepoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE931E67059500F32BDB /* RepoModel.m */; };
-		928DDE9B1E6705A100F32BDB /* WXSGithubNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE9A1E6705A100F32BDB /* WXSGithubNetWork.m */; };
-		928DDE9E1E67067B00F32BDB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDE9D1E67067B00F32BDB /* SearchViewController.m */; };
-		928DDEA41E67094A00F32BDB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDEA31E67094A00F32BDB /* DetailViewController.m */; };
+		928DDEB41E672D6400F32BDB /* RepoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDEA71E672D6400F32BDB /* RepoModel.m */; };
+		928DDEB51E672D6400F32BDB /* WXSGithubNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDEA91E672D6400F32BDB /* WXSGithubNetWork.m */; };
+		928DDEB61E672D6400F32BDB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDEAC1E672D6400F32BDB /* DetailViewController.m */; };
+		928DDEB71E672D6400F32BDB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDEAE1E672D6400F32BDB /* SearchViewController.m */; };
+		928DDEB81E672D6400F32BDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDEB01E672D6400F32BDB /* ViewController.m */; };
+		928DDEB91E672D6400F32BDB /* RepoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 928DDEB31E672D6400F32BDB /* RepoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,6 @@
 		928DDE5E1E6704D700F32BDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		928DDE601E6704D700F32BDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		928DDE611E6704D700F32BDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		928DDE631E6704D700F32BDB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		928DDE641E6704D700F32BDB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		928DDE671E6704D700F32BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		928DDE691E6704D700F32BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		928DDE6C1E6704D700F32BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,16 +54,18 @@
 		928DDE7E1E6704D800F32BDB /* WXSGithubAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXSGithubAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		928DDE821E6704D800F32BDB /* WXSGithubAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSGithubAppUITests.m; sourceTree = "<group>"; };
 		928DDE841E6704D800F32BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		928DDE901E67059500F32BDB /* RepoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoCell.h; sourceTree = "<group>"; };
-		928DDE911E67059500F32BDB /* RepoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoCell.m; sourceTree = "<group>"; };
-		928DDE921E67059500F32BDB /* RepoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoModel.h; sourceTree = "<group>"; };
-		928DDE931E67059500F32BDB /* RepoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoModel.m; sourceTree = "<group>"; };
-		928DDE991E6705A100F32BDB /* WXSGithubNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSGithubNetWork.h; sourceTree = "<group>"; };
-		928DDE9A1E6705A100F32BDB /* WXSGithubNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSGithubNetWork.m; sourceTree = "<group>"; };
-		928DDE9C1E67067B00F32BDB /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		928DDE9D1E67067B00F32BDB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		928DDEA21E67094A00F32BDB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		928DDEA31E67094A00F32BDB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		928DDEA61E672D6400F32BDB /* RepoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoModel.h; sourceTree = "<group>"; };
+		928DDEA71E672D6400F32BDB /* RepoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoModel.m; sourceTree = "<group>"; };
+		928DDEA81E672D6400F32BDB /* WXSGithubNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSGithubNetWork.h; sourceTree = "<group>"; };
+		928DDEA91E672D6400F32BDB /* WXSGithubNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSGithubNetWork.m; sourceTree = "<group>"; };
+		928DDEAB1E672D6400F32BDB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		928DDEAC1E672D6400F32BDB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		928DDEAD1E672D6400F32BDB /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		928DDEAE1E672D6400F32BDB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		928DDEAF1E672D6400F32BDB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		928DDEB01E672D6400F32BDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		928DDEB21E672D6400F32BDB /* RepoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoCell.h; sourceTree = "<group>"; };
+		928DDEB31E672D6400F32BDB /* RepoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,18 +118,9 @@
 			children = (
 				928DDE601E6704D700F32BDB /* AppDelegate.h */,
 				928DDE611E6704D700F32BDB /* AppDelegate.m */,
-				928DDE631E6704D700F32BDB /* ViewController.h */,
-				928DDE641E6704D700F32BDB /* ViewController.m */,
-				928DDE9C1E67067B00F32BDB /* SearchViewController.h */,
-				928DDE9D1E67067B00F32BDB /* SearchViewController.m */,
-				928DDEA21E67094A00F32BDB /* DetailViewController.h */,
-				928DDEA31E67094A00F32BDB /* DetailViewController.m */,
-				928DDE901E67059500F32BDB /* RepoCell.h */,
-				928DDE911E67059500F32BDB /* RepoCell.m */,
-				928DDE921E67059500F32BDB /* RepoModel.h */,
-				928DDE931E67059500F32BDB /* RepoModel.m */,
-				928DDE991E6705A100F32BDB /* WXSGithubNetWork.h */,
-				928DDE9A1E6705A100F32BDB /* WXSGithubNetWork.m */,
+				928DDEA51E672D6400F32BDB /* Model */,
+				928DDEAA1E672D6400F32BDB /* VC */,
+				928DDEB11E672D6400F32BDB /* View */,
 				928DDE661E6704D700F32BDB /* Main.storyboard */,
 				928DDE691E6704D700F32BDB /* Assets.xcassets */,
 				928DDE6B1E6704D700F32BDB /* LaunchScreen.storyboard */,
@@ -163,6 +154,39 @@
 				928DDE841E6704D800F32BDB /* Info.plist */,
 			);
 			path = WXSGithubAppUITests;
+			sourceTree = "<group>";
+		};
+		928DDEA51E672D6400F32BDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				928DDEA61E672D6400F32BDB /* RepoModel.h */,
+				928DDEA71E672D6400F32BDB /* RepoModel.m */,
+				928DDEA81E672D6400F32BDB /* WXSGithubNetWork.h */,
+				928DDEA91E672D6400F32BDB /* WXSGithubNetWork.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		928DDEAA1E672D6400F32BDB /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				928DDEAB1E672D6400F32BDB /* DetailViewController.h */,
+				928DDEAC1E672D6400F32BDB /* DetailViewController.m */,
+				928DDEAD1E672D6400F32BDB /* SearchViewController.h */,
+				928DDEAE1E672D6400F32BDB /* SearchViewController.m */,
+				928DDEAF1E672D6400F32BDB /* ViewController.h */,
+				928DDEB01E672D6400F32BDB /* ViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		928DDEB11E672D6400F32BDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				928DDEB21E672D6400F32BDB /* RepoCell.h */,
+				928DDEB31E672D6400F32BDB /* RepoCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,14 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				928DDE651E6704D700F32BDB /* ViewController.m in Sources */,
+				928DDEB51E672D6400F32BDB /* WXSGithubNetWork.m in Sources */,
 				928DDE621E6704D700F32BDB /* AppDelegate.m in Sources */,
-				928DDEA41E67094A00F32BDB /* DetailViewController.m in Sources */,
 				928DDE5F1E6704D700F32BDB /* main.m in Sources */,
-				928DDE961E67059500F32BDB /* RepoCell.m in Sources */,
-				928DDE971E67059500F32BDB /* RepoModel.m in Sources */,
-				928DDE9B1E6705A100F32BDB /* WXSGithubNetWork.m in Sources */,
-				928DDE9E1E67067B00F32BDB /* SearchViewController.m in Sources */,
+				928DDEB81E672D6400F32BDB /* ViewController.m in Sources */,
+				928DDEB61E672D6400F32BDB /* DetailViewController.m in Sources */,
+				928DDEB41E672D6400F32BDB /* RepoModel.m in Sources */,
+				928DDEB71E672D6400F32BDB /* SearchViewController.m in Sources */,
+				928DDEB91E672D6400F32BDB /* RepoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

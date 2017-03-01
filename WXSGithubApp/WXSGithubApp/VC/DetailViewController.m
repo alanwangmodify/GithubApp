@@ -10,7 +10,6 @@
 #import "RepoModel.h"
 
 @interface DetailViewController ()
-@property (nonatomic, strong) UIButton *dismissBtn;
 
 
 @end
@@ -28,7 +27,6 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.dismissBtn];
     [self setupView];
 }
 
@@ -106,15 +104,6 @@
 
     }
     return _repoNameLab;
-}
-- (UIButton *)dismissBtn {
-    if (!_dismissBtn) {
-        _dismissBtn = [[UIButton alloc] init];
-        _dismissBtn.frame = CGRectMake(0, 0, 50,50);
-        [_dismissBtn setTitle:@"返回" forState:UIControlStateNormal];
-        [_dismissBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _dismissBtn;
 }
 
 
