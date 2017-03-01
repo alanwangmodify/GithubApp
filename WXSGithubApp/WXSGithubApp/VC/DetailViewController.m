@@ -38,7 +38,7 @@
     
     
     self.ownerAvatar.frame = CGRectMake(0, 0, 40, 40);
-    self.ownerAvatar.center = CGPointMake(self.view.center.x, 100);
+    self.ownerAvatar.center = CGPointMake(self.view.center.x, 120);
     
     self.repoNameLab.frame = CGRectMake(0, 0, self.view.bounds.size.width, 20);
     self.repoNameLab.center = CGPointMake(self.view.center.x, CGRectGetMaxY(self.ownerAvatar.frame)+ 20);
