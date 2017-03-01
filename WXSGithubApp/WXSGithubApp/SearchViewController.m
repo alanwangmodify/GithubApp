@@ -43,14 +43,18 @@ CGFloat const k_animaton_time = 0.4;
 #pragma mark - data and action
 - (void)getReposData {
     
-    [WXSGithubNetWork searchUserDataWithKeyStr:self.searchController.searchBar.text andPageCount:0 Commpletion:^(NSArray<RepoModel *> *items) {
+    [WXSGithubNetWork searchUserDataWithKeyStr:self.searchController.searchBar.text andPageCount:_page Commpletion:^(NSArray<RepoModel *> *items) {
         NSMutableArray *tempArr = [[NSMutableArray alloc] initWithArray:self.items];
-        [tempArr addObjectsFromArray:items];
-        self.items = [tempArr copy];
+        
+        self.items = items;
         [self.resultTableView reloadData];
-        if (_page>0) {
-            self.resultTableView.contentInset = UIEdgeInsetsMake(self.resultTableView.contentInset.top, self.resultTableView.contentInset.left, self.resultTableView.contentInset.bottom - 40, self.resultTableView.contentInset.right);
-        }
+        //翻页
+//        [tempArr addObjectsFromArray:items];
+//        self.items = [tempArr copy];
+//        [self.resultTableView reloadData];
+//        if (_page>0) {
+//            self.resultTableView.contentInset = UIEdgeInsetsMake(self.resultTableView.contentInset.top, self.resultTableView.contentInset.left, self.resultTableView.contentInset.bottom - 40, self.resultTableView.contentInset.right);
+//        }
     }];
     
 }
@@ -102,7 +106,7 @@ CGFloat const k_animaton_time = 0.4;
         RepoModel *model = _items[indexPath.row];
         DetailViewController *vc = [[DetailViewController alloc] initWithRepoModel:model];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        nav.transitioningDelegate = self;
+//        nav.transitioningDelegate = self;
         [self presentViewController:nav animated:YES completion:^{
             
         }];
@@ -115,11 +119,11 @@ CGFloat const k_animaton_time = 0.4;
 //翻页
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-     if (scrollView.contentOffset.y > scrollView.contentSize.height - 100) {
-         scrollView.contentInset = UIEdgeInsetsMake(scrollView.contentInset.top, scrollView.contentInset.left, scrollView.contentInset.bottom + 40, scrollView.contentInset.right);
-         _page++;
-         [self loadMoreData];
-     }
+//     if (scrollView.contentOffset.y > scrollView.contentSize.height - 100) {
+//         scrollView.contentInset = UIEdgeInsetsMake(scrollView.contentInset.top, scrollView.contentInset.left, scrollView.contentInset.bottom + 40, scrollView.contentInset.right);
+//         _page++;
+//         [self loadMoreData];
+//     }
 }
 
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
