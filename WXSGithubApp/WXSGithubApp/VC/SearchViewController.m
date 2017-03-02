@@ -44,7 +44,10 @@ CGFloat const k_animaton_time = 0.4;
 - (void)getReposData {
     
     [WXSGithubNetWork searchUserDataWithKeyStr:self.searchController.searchBar.text andPageCount:_page Commpletion:^(NSArray<RepoModel *> *items) {
-        self.items = items;
+        
+        NSMutableArray *tempItems = [[NSMutableArray alloc] initWithArray:self.items];
+        [tempItems addObjectsFromArray:items];
+        self.items = [tempItems copy];
         [self.resultTableView reloadData];
 
     }];
@@ -107,9 +110,12 @@ CGFloat const k_animaton_time = 0.4;
 //翻页
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-//     if (scrollView.contentOffset.y > scrollView.contentSize.height - 100) {
+    if (scrollView.contentOffset.y + scrollView.bounds.size.height > scrollView.contentSize.height) {
+        [self loadMoreData];
+    }
+    
+//     if (scrollView.contentOffset.y + scrollView.bounds.size.height> scrollView.contentSize.height - 30) {
 //         scrollView.contentInset = UIEdgeInsetsMake(scrollView.contentInset.top, scrollView.contentInset.left, scrollView.contentInset.bottom + 40, scrollView.contentInset.right);
-//         _page++;
 //         [self loadMoreData];
 //     }
 }
