@@ -256,7 +256,7 @@
 				TargetAttributes = {
 					928DDE591E6704D700F32BDB = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = XL757M85MR;
+						DevelopmentTeam = DHE6GUA4LT;
 						ProvisioningStyle = Automatic;
 					};
 					928DDE721E6704D800F32BDB = {
@@ -479,7 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XL757M85MR;
+				DEVELOPMENT_TEAM = DHE6GUA4LT;
 				INFOPLIST_FILE = WXSGithubApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -492,7 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XL757M85MR;
+				DEVELOPMENT_TEAM = DHE6GUA4LT;
 				INFOPLIST_FILE = WXSGithubApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -566,6 +566,7 @@
 				928DDE891E6704D800F32BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		928DDE8A1E6704D800F32BDB /* Build configuration list for PBXNativeTarget "WXSGithubAppTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +575,7 @@
 				928DDE8C1E6704D800F32BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		928DDE8D1E6704D800F32BDB /* Build configuration list for PBXNativeTarget "WXSGithubAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +584,7 @@
 				928DDE8F1E6704D800F32BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

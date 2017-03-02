@@ -25,6 +25,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.delegate = nil;
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupView];
@@ -37,7 +38,7 @@
     [self.view addSubview:self.repoNameLab];
     
     
-    self.ownerAvatar.frame = CGRectMake(0, 0, 40, 40);
+    self.ownerAvatar.frame = CGRectMake(0, 0, 100, 100);
     self.ownerAvatar.center = CGPointMake(self.view.center.x, 120);
     
     self.repoNameLab.frame = CGRectMake(0, 0, self.view.bounds.size.width, 20);

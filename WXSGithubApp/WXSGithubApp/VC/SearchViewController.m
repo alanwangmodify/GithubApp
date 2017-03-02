@@ -44,17 +44,9 @@ CGFloat const k_animaton_time = 0.4;
 - (void)getReposData {
     
     [WXSGithubNetWork searchUserDataWithKeyStr:self.searchController.searchBar.text andPageCount:_page Commpletion:^(NSArray<RepoModel *> *items) {
-        NSMutableArray *tempArr = [[NSMutableArray alloc] initWithArray:self.items];
-        
         self.items = items;
         [self.resultTableView reloadData];
-        //翻页
-//        [tempArr addObjectsFromArray:items];
-//        self.items = [tempArr copy];
-//        [self.resultTableView reloadData];
-//        if (_page>0) {
-//            self.resultTableView.contentInset = UIEdgeInsetsMake(self.resultTableView.contentInset.top, self.resultTableView.contentInset.left, self.resultTableView.contentInset.bottom - 40, self.resultTableView.contentInset.right);
-//        }
+
     }];
     
 }
@@ -105,7 +97,7 @@ CGFloat const k_animaton_time = 0.4;
     if (indexPath.row < _items.count) {
         RepoModel *model = _items[indexPath.row];
         DetailViewController *vc = [[DetailViewController alloc] initWithRepoModel:model];
-        vc.navigationController.delegate = self;
+        self.navigationController.delegate = self;
         [self.navigationController pushViewController:vc animated:YES];
         _selectIndepath = indexPath;
     }
@@ -123,6 +115,7 @@ CGFloat const k_animaton_time = 0.4;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    
     if (UINavigationControllerOperationPush) {
         return self;
     }else{
@@ -136,6 +129,8 @@ CGFloat const k_animaton_time = 0.4;
     
 }
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
+    
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     DetailViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *containerView = [transitionContext containerView];
     
@@ -149,6 +144,7 @@ CGFloat const k_animaton_time = 0.4;
     
     UIView *toView = toVC.ownerAvatar;
     CGRect toRect = [toView convertRect:toView.bounds toView:containerView];
+    fromVC.view.hidden = YES;
     toVC.view.alpha = 0.0;
     toView.hidden = YES;
     [UIView animateWithDuration:k_animaton_time animations:^{
@@ -156,6 +152,7 @@ CGFloat const k_animaton_time = 0.4;
     } completion:^(BOOL finished) {
         toView.hidden = NO;
         toVC.view.alpha = 1.0;
+        fromVC.view.hidden = NO;
         [imgView removeFromSuperview];
         [transitionContext completeTransition:YES];
     }];
