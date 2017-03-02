@@ -139,6 +139,10 @@ CGFloat const k_animaton_time = 0.4;
     UIImageView *imgView = [[UIImageView alloc] initWithImage:cell.ownerAvatar.image];
     imgView.frame = rect;
     
+    UIView *whiteBgView = [[UIView alloc] initWithFrame:containerView.bounds];
+    whiteBgView.backgroundColor = [UIColor whiteColor];
+    
+    [containerView addSubview:whiteBgView];
     [containerView addSubview:toVC.view];
     [containerView addSubview:imgView];
     
@@ -208,7 +212,7 @@ CGFloat const k_animaton_time = 0.4;
         _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
         _searchController.searchResultsUpdater = self;
         _searchController.searchBar.placeholder = @"";
-        _searchController.dimsBackgroundDuringPresentation = NO;
+        _searchController.dimsBackgroundDuringPresentation = YES;
         _searchController.searchBar.delegate = self;
         [_searchController.searchBar sizeToFit];
     }
